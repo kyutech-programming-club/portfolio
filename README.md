@@ -1,69 +1,59 @@
-# React + TypeScript + Vite
+![ポートフォリオサイト](https://github.com/user-attachments/assets/b78c2527-683e-49ac-b9d2-c02c67e4da0e)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ポートフォリオサイト
 
-Currently, two official plugins are available:
+## 概要
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+このプロジェクトでは、シンプルなポートフォリオサイトを構築します。
+React 完全初心者でも問題なく作成できる内容になっているので、
+学び始めの第一歩に、おすすめです。
 
-## Expanding the ESLint configuration
+## 学習目標
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Web サイトのマークアップを中心に、React の基本的な概念を確認してください。
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- コンポーネント
+- tsx 記法
+- props と State
+- 条件付きレンダリング
+- リストとキー
+- children としてコンポーネントを埋め込む
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 推奨技術
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+このプロジェクトの難易度と趣旨を踏まえて、以下の使用をお勧めします。
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- vite を用いた React 環境構築
+- Tailwind CSS を用いたスタイリング
+- GitHub Pages へのデプロイ
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎯 お題
+
+- 「ユーザーストーリー」を全て満たす、アプリを構築してください。
+- 必要に応じて、スクリーンショットやデモサイトの URL を、参照してください。
+- なお、スタイルは、あなた自身で独自にカスタマイズすることが可能です。
+- サイト内の画像、テキストは、あなた自身で独自にカスタマイズすることが可能です。
+
+### 構成
+
+このサイトは、以下の 6 つの要素・セクションで、構成されています：
+
+1. ヘッダー
+2. Hero セクション
+3. About セクション
+4. Portfolio セクション
+5. Social セクション
+6. フッター
+
+## ユーザーストーリー
+
+- [ ] ヘッダーにサイトのタイトルと、各セクションへのナビゲーションリンクが表示されている
+- [ ] Hero セクションに、「見出し・サイトに関する簡潔な紹介文・GitHub へのリンク」が表示されている
+- [ ] About セクションに、画像・自己紹介文が表示されている
+- [ ] Portfolio セクションに、選択可能な、プロジェクトの一覧が表示されている
+- [ ] Portfolio セクションでは、選択したプロジェクトのスクリーンショットと、簡潔な説明、GitHub へのリンクが表示されている
+- [ ] Social セクションに、各媒体へ遷移できる、アイコン付きのボタンが表示されている
+- [ ] フッターに、コピーライトが表示されている
+- [ ] アプリケーションがデプロイされており、誰でもアクセス可能である。
